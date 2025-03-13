@@ -31,6 +31,9 @@ body {
     font-size: 1.6rem;
    /* font-size 1.6rem is now the same as 16px */
    line-height: 1.6;
+   animation-name: gradient;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 /* ANIMATIONS 
@@ -41,15 +44,25 @@ body {
       width: 100px;
     }
     100% {
-      width: 200px;
+      width: 100%;
     }
+  }
+
+  @keyframes gradient {
+  0%, 15% { 
+    background: rgb(2,0,36);
+  }
+  to{
+  background: rgb(131,58,180);
+}
   }
   
   
   .button {
-    animation-name: stretching;
-    animation-duration: 1s;
+    animation: 3s infinite ease-in stretching; 
     background-color: maroon;
     display: inline-block;
+    padding: 15px;
+    color: white;
   }
   
